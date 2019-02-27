@@ -1,0 +1,115 @@
+body {
+  margin: 15px;
+  font-size: 18px;
+  font-family: Verdana;
+  background-color: #fffbdb;
+}
+
+#backgroundTopLayerBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height:120px;
+	background-color: #373131;
+	z-index:-5;
+}
+
+#trickyCenterBox{
+	position: absolute;
+	width:2000px;
+	height:1000px;
+	top:120px;
+	left:50%;
+	/* margin-left: 1%; */
+	background-color: blue;
+}
+#trickyTopBox{
+	position: absolute;
+	top: 0px;
+	width:2000px;
+	height:120px;
+	left:50%;
+	background-color: blue;
+
+}
+
+#topBox{
+	position: absolute;
+	top: 0px;
+	width: 1000px;
+	height: 100%;
+	margin-left:-25%;
+	background-color: transparent;
+
+}
+
+#centerWholeBox{
+	position: absolute;
+	width: 1000px;
+	margin-top: 2px;
+	margin-left:-25%;
+	background-color: transparent;
+}
+#leftTopBox{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 250px;
+	background-color: green;
+
+
+}
+#rightTopBox{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	text-align: center;
+	width: 250px;
+	background-color: yellow;
+
+}
+#centerTopBox{
+	position: absolute;
+	left: 260px;
+	right: 260px;
+	height: 100%;
+	/* width: 250px; */
+	background-color: lime;
+
+}
+#leftCenterBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	height: auto;
+	width: 120px;
+	background-color: red;
+	border: 1px solid #ff7b0f;
+	border-radius: 25px;
+}
+
+#rightCenterBox{
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	height: auto;
+	width: 120px;
+	background-color: red;
+	border: 1px solid #ff7b0f;
+	border-radius: 25px;
+
+}
+
+#contentCenterBox{
+	position: absolute;
+	text-align: center;
+	left: 130px;
+	right: 130px;
+	background-color: transparent;
+	border: 3px solid #ff7b0f;
+	border-radius: 25px;
+
+}

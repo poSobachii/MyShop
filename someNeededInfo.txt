@@ -1,0 +1,8 @@
+<div id="leftCenterBox" method="get">
+               <form action = "wareContent">
+               <input type="submit" name="ware" value="shirts">
+               <input type="submit" name="ware" value="shirtsTwo">
+               <input type="submit" name="ware" value="cups">
+               </form>
+
+    	</div>
