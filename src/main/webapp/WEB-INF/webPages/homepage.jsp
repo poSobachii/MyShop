@@ -1,22 +1,31 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>MyShop online web-store</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="css/layers.css">
+     <link rel="stylesheet" href="css/SmartShopLayers.css">
+     <script type="text/javascript" src="js/scripts2.js"></script>
 </head>
 <body>
 
+    <div id="BoxOfGod">
+            Рука Боженьки
+            <form action = "testTemp"> <input type="submit" value="Check wares">
+            </form>
+            <button onclick="testJS()">JS workin ?</button>
+            </div>
+
 	<div id="backgroundTopLayerBox">
 	</div>
-	<div id="trickyTopBox">
+
 	<div id="topBox">
 	<div id="leftTopBox">
 	<form action = "home">
             <input type="submit" value=" # LOGO">
             </form>
+
+
 	</div>
 
 	<div id="rightTopBox">
@@ -33,19 +42,16 @@
 	Official nafig web store
 	</div>
 	</div>
-	</div>
 
-	<div id="trickyCenterBox">
+
 	<div id="centerWholeBox">
-
 	<div id="contentCenterBox">
-        <p> #HOME </p>
+            <p> #HOME </p>
+
         	<p> #HOME </p>
-        	<img src="<c:url value="static/pics/template.gif"></c:url>" />
-        <img src="static/pics/template.gif" width="250" height="225" alt="ха лошара" /> </br>
-        	<img src="WEB-INF/pics/template.png" width="250" height="225" alt="ха лошара" /> </br>
-        	<img src="pics/template.gif" width="250" height="225" alt="ха лошара" /> </br>
-        	<img src="pics/template.png" width="250" height="150" alt="ха лошара" /> </br>
+
+
+
 
 
 	</div>
@@ -76,13 +82,20 @@
 
 
 	<div id="rightCenterBox">
-	Our Contancts
+	Our Contacts
 	</br></br></br>
-	Advertisings
+	fb link
 
 	</div>
 	</div>
-	</div>
+
+	<div class="container">
+        <footer>
+            <p>
+                ? blablablaShop.com  2019
+            </p>
+        </footer>
+    </div>
 
 </body>
 </html>

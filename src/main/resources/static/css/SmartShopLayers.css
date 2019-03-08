@@ -15,42 +15,18 @@ body {
 	z-index:-5;
 }
 
-#trickyCenterBox{
-	position: absolute;
-	width:2000px;
-	height:1000px;
-	top:120px;
-	left:50%;
-	/* margin-left: 1%; */
-	background-color: blue;
-}
-#trickyTopBox{
-	position: absolute;
-	top: 0px;
-	width:2000px;
-	height:120px;
-	left:50%;
-	background-color: blue;
-
-}
-
 #topBox{
 	position: absolute;
 	top: 0px;
 	width: 1000px;
-	height: 100%;
-	margin-left:-25%;
+	height: 120px;
+	left: 50%;
+	margin-left:-500px;
 	background-color: transparent;
 
 }
 
-#centerWholeBox{
-	position: absolute;
-	width: 1000px;
-	margin-top: 2px;
-	margin-left:-25%;
-	background-color: transparent;
-}
+
 #leftTopBox{
 	position: absolute;
 	left: 0;
@@ -78,6 +54,19 @@ body {
 	background-color: lime;
 
 }
+
+
+
+#centerWholeBox{
+	position: absolute;
+	width: 1000px;
+	margin-top: 2px;
+	top: 120px;
+	left: 50%;
+	margin-left: -500px;
+	background-color: transparent;
+}
+
 #leftCenterBox{
 	position: absolute;
 	top: 0;
@@ -85,9 +74,9 @@ body {
 	text-align: center;
 	height: auto;
 	width: 120px;
-	background-color: red;
+	background-color: white;
 	border: 1px solid #ff7b0f;
-	border-radius: 25px;
+	border-radius: 20px;
 }
 
 #rightCenterBox{
@@ -97,9 +86,9 @@ body {
 	text-align: center;
 	height: auto;
 	width: 120px;
-	background-color: red;
+	background-color: white;
 	border: 1px solid #ff7b0f;
-	border-radius: 25px;
+	border-radius: 20px;
 
 }
 
@@ -108,8 +97,32 @@ body {
 	text-align: center;
 	left: 130px;
 	right: 130px;
+	background-color: white;
+	border: 3px solid #ff7b0f;
+	border-radius: 25px;
+
+}
+
+#contentLoginInstance{
+	position: absolute;
+	text-align: left;
+	left: 130px;
+	right: 130px;
 	background-color: transparent;
 	border: 3px solid #ff7b0f;
 	border-radius: 25px;
+	z-index: -1;
+
+}
+
+#BoxOfGod{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    height: auto;
+    width: 170px;
+    background-color: red;
+    border: 2px solid #ff7b0f;
+    z-index: 2;
 
 }

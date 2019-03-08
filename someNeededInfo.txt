@@ -6,3 +6,25 @@
                </form>
 
     	</div>
+
+
+
+
+    	<div id="contentCenterBox">
+                    <p> #HOME </p>
+                    <p id="demo1"></p>
+                    <p id="demo2"></p>
+                	<p> #HOME </p>
+                	<p> #HOME </p>
+                	<button onclick="myFunctions()">JS workin ?</button>
+                	<div class="col-md-6" style="background-color:transparent;">
+                	<img src="pics/shirts/6.png" width="250" height="225" alt="there is no picture :(" />
+                	</br>black shirt</br>Cost: 15.99 EUR.</br> The code is: 6</br>
+                	<form name = "addToBasket">
+                	<input type="hidden" name="addToBasket" value="value">
+                    <input type="button" value="Add to basket" onclick="return add_to_basket2('black',6)">
+                    </form></div>
+
+
+
+        	</div>

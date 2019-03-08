@@ -11,15 +11,15 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan
-public class SpringBootWebApplication extends SpringBootServletInitializer {
+public class startGrindingMoney extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SpringBootWebApplication.class);
+        return application.sources(startGrindingMoney.class);
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(SpringBootWebApplication.class, args);
+        SpringApplication.run(startGrindingMoney.class, args);
     }
 
 }
