@@ -28,3 +28,41 @@
 
 
         	</div>
+
+
+<div class="container-fluid">
+               <div class="row" text-align="right">
+               <%
+               out.print(PrintContent.write());
+                %>
+               </div>
+        </div>
+	</div>
+
+	<form action="loginin" method="get">
+            <p>Login: <input type="text" name="logn"/></p>
+            <p>Password: <input type="password" name="pass"/></p>
+            <input type="submit" value="try">
+        </form>
+
+
+
+	<div class=\"col-sm-4\" style=\"background-color:transparent;\">" +
+                                        "<form action=\"wareInfo\">" +
+                                        "<input type=\"hidden\" name=\"wareGroup\" value=\"" + temp + "\">" +
+                                        "<input type=\"hidden\" name=\"wareID\" value=\"" + id + "\">" +
+                                        "<input type=\"image\" <img src=\"pics/"+ temp + "/" + id + ".png\"" +
+                                        " width=\"250\" height=\"225\" alt=\"there is no picture :(\" />" +
+                                        "</form>" +
+                                        "<form action=\"wareInfo\">" +
+                                        "<input type=\"hidden\" name=\"wareGroup\" value=\"" + temp + "\">" +
+                                        "<input type=\"hidden\" name=\"wareID\" value=\"" + id + "\">" +
+                                        "<input type=\"submit\" value=\"" + title + "\">" +
+                                        "</form>" +
+                                        "</br> Cost: " + price + " EUR." +
+                                        "</br><form name = \"addToBasket\">\n" +
+                                        "<input type=\"hidden\" name=\"basketValue\" value=\"" + id + "\">\n" +
+                                        "<input type=\"button\" value=\"Add to basket\"" +
+                                        " onclick=\"return add_to_basket(" +
+                                        "\'" + temp + "\',\'" + title + "\'," + id +
+                                        ")\"</form></div>"

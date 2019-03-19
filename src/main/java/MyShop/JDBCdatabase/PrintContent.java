@@ -33,22 +33,28 @@ public class PrintContent {
                     double price = rset.getDouble("price");
 //                    int    qty   = rset.getInt("qty");
                     strbuff.append
-                            ("<div class=\"col-sm-6\" style=\"background-color:transparent;\">" +
-                                    "<img src=\"pics/"+ temp + "/" + id + ".png\"" +
+                            ("<div class=\"col-sm-4\" style=\"background-color:transparent;\">" +
+                                    "<form action=\"wareInfo\">" +
+                                    "<input type=\"hidden\" name=\"wareGroup\" value=\"" + temp + "\">" +
+                                    "<input type=\"hidden\" name=\"wareID\" value=\"" + id + "\">" +
+                                    "<input type=\"image\" <img src=\"pics/"+ temp + "/" + id + ".png\"" +
                                     " width=\"250\" height=\"225\" alt=\"there is no picture :(\" />" +
-                                    "</br>" + title +
+                                    "</form>" +
+                                    "<form action=\"wareInfo\">" +
+                                    "<input type=\"hidden\" name=\"wareGroup\" value=\"" + temp + "\">" +
+                                    "<input type=\"hidden\" name=\"wareID\" value=\"" + id + "\">" +
+                                    "<input type=\"submit\" value=\"" + title + "\">" +
+                                    "</form>" +
                                     "</br> Cost: " + price + " EUR." +
-//                                  "</br> Quantity available: " + qty +
-                                    "</br> The code is: " + id +
-                                    "</br><form name = \"addToBasket\">\n" +
-                                    "<input type=\"hidden\" name=\"basketValue\" value=\"" + id + "\">\n" +
+                                    "</br><form name = \"addToBasket\">" +
+                                    "<input type=\"hidden\" name=\"basketValue\" value=\"" + id + "\">" +
                                     "<input type=\"button\" value=\"Add to basket\"" +
                                     " onclick=\"return add_to_basket(" +
                                     "\'" + temp + "\',\'" + title + "\'," + id +
-                                    ")\"</form></div>");
+                                    ")\"></form></div>\n");
 
                 }
-//                System.out.println(strbuff);
+                System.out.println(strbuff);
 
             } catch(SQLException ex) {
                 ex.printStackTrace();

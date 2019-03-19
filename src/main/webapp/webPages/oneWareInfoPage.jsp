@@ -1,34 +1,41 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="MyShop.JDBCdatabase.OneWareInfoPrint"%>
 <!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>MyShop online web-store</title>
+    <title>Smart_Dog shop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/SmartShopLayers.css">
+     <link rel="stylesheet" href="css/Layers8.css">
      <script type="text/javascript" src="js/scripts2.js"></script>
 </head>
 <body>
 
     <div id="BoxOfGod">
-            Рука Боженьки
-            <form action = "testTemp"> <input type="submit" value="Check wares">
-            </form>
+            <h3> Рука Боженьки</h3>
+            <form action = "testTemp"> <input type="submit" value="Check wares"></form>
             <button onclick="testJS()">JS workin ?</button>
+            <button onclick="printBasket()">Basket Content</button>
             </div>
 
-	<div id="backgroundTopLayerBox">
+	<div id="TopBackgroundLayer">
 	</div>
 
 	<div id="topBox">
-	<div id="leftTopBox">
+
+	<div id="TopLeftBox">
 	<form action = "home">
-            <input type="submit" value=" # LOGO">
+            <input type="image"<img src="pics/logo/logoSmall.png" width="200" height="120" /></input>
             </form>
-
-
 	</div>
 
-	<div id="rightTopBox">
+	<div id="TopCenterBox">
+    	<h3><font color="white"> Официальный магазин Smart Dog & </br>
+        	Нафиг с Пляжу я тут Ляжу.</font></h3>
+    	</div>
+
+
+	<div id="TopRightBox">
 	Rus/ENG
 	<form action = "login">
                    <input type="submit" value="LOGIN">
@@ -37,27 +44,19 @@
                    <input type="submit" value="BASKET">
                    </form>
 	</div>
-
-	<div id="centerTopBox">
-	Official nafig web store
-	</div>
 	</div>
 
 
 	<div id="centerWholeBox">
-	<div id="contentCenterBox">
-            <p> #HOME </p>
-
-        	<p> #HOME </p>
-
-
+	<div id="CenterContentBox">
+            <% out.print(OneWareInfoPrint.write()); %>
 
 
 
 	</div>
 
 
-    <div id="leftCenterBox" method="get">
+    <div id="CenterLeftBox" method="get">
                <form action = "wareContent">
                <input type="hidden" name="ware" value="shirts">
                <input type="submit" value="SHIRTS 1">
@@ -74,28 +73,21 @@
                </form>
 
                <form action = "wareContent">
-                              <input type="hidden" name="ware" value="ballons">
-                              <input type="submit" value="Baloons">
-                              </form>
+               <input type="hidden" name="ware" value="ballons">
+               <input type="submit" value="Baloons">
+               </form>
+
 
     	</div>
 
 
-	<div id="rightCenterBox">
+	<div id="CenterRightBox">
 	Our Contacts
 	</br></br></br>
-	fb link
+	 <button onclick="window.location.href = 'https://facebook.com';">FB click</button>
 
 	</div>
 	</div>
-
-	<div class="container">
-        <footer>
-            <p>
-                ? blablablaShop.com  2019
-            </p>
-        </footer>
-    </div>
 
 </body>
 </html>

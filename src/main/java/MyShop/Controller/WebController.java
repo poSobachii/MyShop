@@ -1,6 +1,7 @@
 package MyShop.Controller;
 
 
+import MyShop.JDBCdatabase.OneWareInfoPrint;
 import MyShop.JDBCdatabase.PrintContent;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,24 +14,36 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class WebController {
 
-    @RequestMapping("/")
+    @RequestMapping(value= {"/", "home"})
     public String welcome() {
-        return "homepage";
-    }
-
-    @RequestMapping("/home")
-    public String homepage() {
-        return "homepage";
+        return "homePage";
     }
 
     @RequestMapping("/testTemp")
     public String testTemp() {
-        return "warespage";
+        return "waresPage";
     }
 
-    @RequestMapping("/login")
-    public String loginFree() {
-        return "loginpage";
+
+    @RequestMapping(value = "/wareContent", method = RequestMethod.GET)
+    public String wareContent(HttpServletRequest request, HttpServletResponse response) {
+        String temp = request.getParameter("ware");
+        PrintContent.PrintWares(temp);
+        return "waresPage";
+
+    }
+
+    @RequestMapping(value = "/wareInfo", method = RequestMethod.GET)
+    public String oneWareInfo(HttpServletRequest request, HttpServletResponse response) {
+        String temp = request.getParameter("wareGroup");
+        String temp2 = request.getParameter("wareID");
+        OneWareInfoPrint.oneWareInfo(temp,temp2);
+        return "oneWareInfoPage";
+    }
+
+    @RequestMapping("/basket")
+    public String Basket() {
+        return "basket";
     }
 
     @RequestMapping(value = "/loginin", method = RequestMethod.GET)
@@ -41,22 +54,9 @@ public class WebController {
         return "loginpage";
     }
 
-    @RequestMapping("/basket")
-    public String Basket() {
-        return "homepage";
+    @RequestMapping("/login")
+    public String loginFree() {
+        return "loginPage";
     }
-
-    @PostMapping("/addBasketResponse.jsp")
-    public void Hujasket() {
-        System.out.println("response injected");;
-    }
-
-    @RequestMapping(value = "/wareContent", method = RequestMethod.GET)
-    public String wareContent(HttpServletRequest request, HttpServletResponse response) {
-        String temp = request.getParameter("ware");
-        PrintContent.PrintWares(temp);
-        return "warespage";
-    }
-
 
 }

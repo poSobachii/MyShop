@@ -9,8 +9,6 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableAutoConfiguration
-@ComponentScan
 public class startGrindingMoney extends SpringBootServletInitializer {
 
     @Override
