@@ -1,10 +1,11 @@
 package MyShop.JDBCdatabase;
 
-import org.springframework.beans.factory.annotation.Value;
 
-import java.sql.*;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class PrintContent {
 
@@ -20,7 +21,7 @@ public class PrintContent {
 
             try (
                     Connection conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/smartdogshop", "root", "12345");
+                            "jdbc:mysql://localhost:3306/smartdogshop", "root", "12345678");
                     Statement stmt = conn.createStatement();
             ) {
                 String strSelect = "select id, wareType, price from " + temp;
@@ -54,7 +55,6 @@ public class PrintContent {
                                     ")\"></form></div>\n");
 
                 }
-                System.out.println(strbuff);
 
             } catch(SQLException ex) {
                 ex.printStackTrace();

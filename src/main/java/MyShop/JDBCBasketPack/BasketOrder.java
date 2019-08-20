@@ -38,7 +38,7 @@ public class BasketOrder {
 
             try (
                     Connection conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/smartdogshop", "root", "12345");
+                            "jdbc:mysql://localhost:3306/smartdogshop", "root", "12345678");
                     Statement stmt = conn.createStatement();
             ) {
                 String strSelect = "select * from " + wareGrp + " where id = \"" + wareId + "\"";

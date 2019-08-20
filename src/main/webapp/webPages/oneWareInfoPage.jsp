@@ -73,7 +73,7 @@
                </form>
 
                <form action = "wareContent">
-               <input type="hidden" name="ware" value="ballons">
+               <input type="hidden" name="ware" value="balloons">
                <input type="submit" value="Baloons">
                </form>
 

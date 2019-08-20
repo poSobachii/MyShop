@@ -78,7 +78,7 @@
                </form>
 
                <form action = "wareContent">
-               <input type="hidden" name="ware" value="ballons">
+               <input type="hidden" name="ware" value="balloons">
                <input type="submit" class="menu_choice4" value=" "><!--
                --><input type="submit" class="menu_choice" value="Шарики">
                </form>

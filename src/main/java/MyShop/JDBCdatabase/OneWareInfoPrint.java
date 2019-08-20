@@ -1,6 +1,10 @@
 package MyShop.JDBCdatabase;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class OneWareInfoPrint {
 
@@ -19,7 +23,7 @@ public class OneWareInfoPrint {
         StringBuffer strbuff = new StringBuffer();
         try (
                 Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/smartdogshop", "root", "12345");
+                        "jdbc:mysql://localhost:3306/smartdogshop", "root", "12345678");
                 Statement stmt = conn.createStatement();
         ) {
             String strSelect = "select * from " + wareGrp + " where id = \"" + wareId + "\"";
