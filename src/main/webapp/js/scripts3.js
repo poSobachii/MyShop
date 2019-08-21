@@ -23,6 +23,19 @@ function printBasket(){
   }
   };
 
+function getPDF(){
+ var http = new XMLHttpRequest();
+ http.open("POST", "http://localhost:8080/responses/printPDForder.jsp", true);
+ http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+ http.send();
+ http.onload = function() {
+ alert("pdf requested");
+ }
+};
+
+function getPDF2() {
+     alert("JS loaded")
+        };
 
 
 

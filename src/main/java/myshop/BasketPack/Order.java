@@ -1,11 +1,11 @@
-package MyShop.JDBCBasketPack;
+package myshop.BasketPack;
 
 public class Order {
 
     private String wareType;
-    private String wareID;
+    private Long wareID;
 
-    public Order(String wareGrp, String wareID) {
+    public Order(String wareGrp, Long wareID) {
         this.wareType = wareGrp;
         this.wareID = wareID;
     }
@@ -18,11 +18,11 @@ public class Order {
         this.wareType = wareType;
     }
 
-    public String getWareID() {
+    public Long getWareID() {
         return wareID;
     }
 
-    public void setWareID(String wareID) {
+    public void setWareID(Long wareID) {
         this.wareID = wareID;
     }
 }

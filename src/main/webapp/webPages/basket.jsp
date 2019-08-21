@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="MyShop.JDBCBasketPack.BasketOrder"%>
-
+<%@ page import="myshop.BasketPack.BasketOrder"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,13 +19,12 @@
 
 	<div class="TopLeftBox">
 	<form action = "home">
-            <input type="image"<img src="pics/logo/logoSmall.png" width="200" height="120" /></input>
+            <input type="image"<img src="pics/Logo/logoSmall.png" width="200" height="120" /></input>
             </form>
 	</div>
 
 	<div class="TopCenterBox">
-    	<h3><font color="white"> Официальный магазин Smart Dog & </br>
-        	Нафиг с Пляжу я тут Ляжу.</font></h3>
+    	<h3><font color="white"> Официальный магазин</font></h3>
         	<h5><font color="white"> Rus/ENG </font></h5>
     	</div>
 
@@ -43,54 +41,57 @@
 
 	<div class="centerWholeBox">
 	<div class="CenterContentBox">
+            <div class="container-fluid">
+                           <div class="row" text-align="right">
+                           <%
+                           out.print(BasketOrder.write());
+                            %>
+                           </div>
+                    </div>
 
-                    <%
-                    out.print(BasketOrder.printBasket());
-                    %>
 
 	</div>
 
 
     <div class="CenterLeftBox" method="get">
 
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="shirts">
-               <input type="submit" class="menu_choice1" value=" "><!--
-               --><input type="submit" class="menu_choice" value="Майки #1">
-               </form>
+                   <form action = "wareContent">
+                   <input type="hidden" name="ware" value="shirts">
+                   <input type="submit" class="menu_choice1" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Майки #1">
+                   </form>
 
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="shirtsTwo">
-               <input type="submit" class="menu_choice2" value=" "><!--
-               --><input type="submit" class="menu_choice" value="Майки #2">
-               </form>
+                   <form action = "wareContent">
+                   <input type="hidden" name="ware" value="shirtsTwo">
+                   <input type="submit" class="menu_choice2" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Майки #2">
+                   </form>
 
-               <form action = "wareContent" >
-               <input type="hidden" name="ware" value="cups">
-               <input type="submit" class="menu_choice3" value=" "><!--
-               --><input type="submit" class="menu_choice" value="Кружки">
-               </form>
+                   <form action = "wareContent" >
+                   <input type="hidden" name="ware" value="cups">
+                   <input type="submit" class="menu_choice3" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Кружки">
+                   </form>
 
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="ballons">
-               <input type="submit" class="menu_choice4" value=" "><!--
-               --><input type="submit" class="menu_choice" value="Шарики">
-               </form>
-
-
+                   <form action = "wareContent">
+                   <input type="hidden" name="ware" value="balloons">
+                   <input type="submit" class="menu_choice4" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Шарики">
+                   </form>
 
 
-    	</div>
+
+
+        	</div>
 
 
 	<div class="CenterRightBox">
-
-    	<form action = "login">
-                       <input type="submit" value="LOGIN">
-                       </form>
     	<form action = "basket">
                        <input type="submit" value="BASKET">
                        </form>
+                       <form action = "pdf" method="post">
+                                              <input type="submit" value="PRINT ORDER">
+                                              </form>
 
 	</div>
 	</div>

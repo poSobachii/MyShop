@@ -1,4 +1,4 @@
-<%@ page import="MyShop.JDBCBasketPack.BasketOrder"%>
+<%@ page import="myshop.BasketPack.BasketOrder"%>
 
 <%
 String type =(String)request.getParameter("param1");

@@ -1,90 +1,95 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="MyShop.JDBCdatabase.OneWareInfoPrint"%>
+<%@ page import="myshop.H2database.OneWareInfoPrint"%>
 <!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Smart_Dog shop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/Layers8.css">
+     <link rel="stylesheet" href="css/Layers13.css">
+     <link rel="stylesheet" href="css/Buttons5.css">
      <script type="text/javascript" src="js/scripts2.js"></script>
 </head>
 <body>
 
-    <div id="BoxOfGod">
-            <h3> Рука Боженьки</h3>
-            <form action = "testTemp"> <input type="submit" value="Check wares"></form>
-            <button onclick="testJS()">JS workin ?</button>
-            <button onclick="printBasket()">Basket Content</button>
-            </div>
-
-	<div id="TopBackgroundLayer">
+	<div class="TopBackgroundLayer">
 	</div>
 
-	<div id="topBox">
+	<div class="topBox">
 
-	<div id="TopLeftBox">
+	<div class="TopLeftBox">
 	<form action = "home">
-            <input type="image"<img src="pics/logo/logoSmall.png" width="200" height="120" /></input>
+            <input type="image"<img src="pics/Logo/logoSmall.png" width="200" height="120" /></input>
             </form>
 	</div>
 
-	<div id="TopCenterBox">
-    	<h3><font color="white"> Официальный магазин Smart Dog & </br>
-        	Нафиг с Пляжу я тут Ляжу.</font></h3>
+	<div class="TopCenterBox">
+    	<h3><font color="white"> Официальный магазин</font></h3>
+        	<h5><font color="white"> Rus/ENG </font></h5>
     	</div>
 
 
-	<div id="TopRightBox">
-	Rus/ENG
-	<form action = "login">
-                   <input type="submit" value="LOGIN">
-                   </form>
-	<form action = "basket">
-                   <input type="submit" value="BASKET">
-                   </form>
-	</div>
-	</div>
-
-
-	<div id="centerWholeBox">
-	<div id="CenterContentBox">
-            <% out.print(OneWareInfoPrint.write()); %>
-
-
-
-	</div>
-
-
-    <div id="CenterLeftBox" method="get">
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="shirts">
-               <input type="submit" value="SHIRTS 1">
-               </form>
-
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="shirtsTwo">
-               <input type="submit" value="SHIRTS 2">
-               </form>
-
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="cups">
-               <input type="submit" value="CUPS">
-               </form>
-
-               <form action = "wareContent">
-               <input type="hidden" name="ware" value="balloons">
-               <input type="submit" value="Baloons">
-               </form>
-
-
-    	</div>
-
-
-	<div id="CenterRightBox">
+	<div class="TopRightBox">
 	Our Contacts
-	</br></br></br>
-	 <button onclick="window.location.href = 'https://facebook.com';">FB click</button>
+    	</br></br></br>
+    	 <button onclick="window.location.href = 'http://localhost:8080/home';">FB click</button>
+
+
+	</div>
+	</div>
+
+
+	<div class="centerWholeBox">
+	<div class="CenterContentBox">
+            <div class="container-fluid">
+                           <div class="row" text-align="right">
+                           <%
+                           out.print(OneWareInfoPrint.write());
+                            %>
+                           </div>
+                    </div>
+
+
+	</div>
+
+
+    <div class="CenterLeftBox" method="get">
+
+                   <form action = "wareContent">
+                   <input type="hidden" name="ware" value="shirts">
+                   <input type="submit" class="menu_choice1" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Майки #1">
+                   </form>
+
+                   <form action = "wareContent">
+                   <input type="hidden" name="ware" value="shirtsTwo">
+                   <input type="submit" class="menu_choice2" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Майки #2">
+                   </form>
+
+                   <form action = "wareContent" >
+                   <input type="hidden" name="ware" value="cups">
+                   <input type="submit" class="menu_choice3" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Кружки">
+                   </form>
+
+                   <form action = "wareContent">
+                   <input type="hidden" name="ware" value="balloons">
+                   <input type="submit" class="menu_choice4" value=" "><!--
+                   --><input type="submit" class="menu_choice" value="Шарики">
+                   </form>
+
+
+
+
+        	</div>
+
+
+	<div class="CenterRightBox">
+
+    	<form action = "basket">
+                       <input type="submit" value="BASKET">
+                       </form>
 
 	</div>
 	</div>

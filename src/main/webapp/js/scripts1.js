@@ -36,7 +36,7 @@ function take_values(){
   alert(http.responseText);
   }
   }
-  }
+
 
   function add_to_basket2(tempo1, tempo2){
      var http = new XMLHttpRequest();

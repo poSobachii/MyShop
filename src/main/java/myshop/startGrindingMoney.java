@@ -1,4 +1,4 @@
-package MyShop;
+package myshop;
 
 
 import org.springframework.boot.SpringApplication;

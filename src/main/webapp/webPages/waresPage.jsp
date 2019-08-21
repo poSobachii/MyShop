@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="MyShop.JDBCdatabase.PrintContent"%>
+<%@ page import="myshop.H2database.PrintContent"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -19,13 +19,12 @@
 
 	<div class="TopLeftBox">
 	<form action = "home">
-            <input type="image"<img src="pics/logo/logoSmall.png" width="200" height="120" /></input>
+            <input type="image"<img src="pics/Logo/logoSmall.png" width="200" height="120" /></input>
             </form>
 	</div>
 
 	<div class="TopCenterBox">
-    	<h3><font color="white"> Официальный магазин Smart Dog & </br>
-        	Нафиг с Пляжу я тут Ляжу.</font></h3>
+    	<h3><font color="white"> Официальный магазин</font></h3>
         	<h5><font color="white"> Rus/ENG </font></h5>
     	</div>
 
@@ -87,10 +86,6 @@
 
 
 	<div class="CenterRightBox">
-
-    	<form action = "login">
-                       <input type="submit" value="LOGIN">
-                       </form>
     	<form action = "basket">
                        <input type="submit" value="BASKET">
                        </form>
