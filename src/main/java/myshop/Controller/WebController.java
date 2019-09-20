@@ -32,7 +32,7 @@ public class WebController {
 
     @RequestMapping(value= {"/", "home"})
     public String welcome() {
-//        dbase.fetchWare("696969696969");    // h2JPA
+        dbase.fetchWare("696969696969");    // h2JPA
         return "homePage";
     }
 
@@ -53,7 +53,7 @@ public class WebController {
     public String oneWareInfo(HttpServletRequest request, HttpServletResponse response) {
         String temp = request.getParameter("wareGroup");
         Long wareID = Long.parseLong(request.getParameter("wareID"));
-        oneWareInfoPrint.oneWareInfo(dbase.getOneItem(temp, wareID));
+        oneWareInfoPrint.oneWareInfo(dbase.getOneItem(wareID));
         return "oneWareInfoPage";
     }
 
@@ -62,13 +62,13 @@ public class WebController {
         return "basket";
     }
 
-    @RequestMapping(value = "/loginin", method = RequestMethod.GET)
-    public String login(HttpServletRequest request, HttpServletResponse response) {
-        String loginsss = request.getParameter("logn");
-        String passwordsss = request.getParameter("pass");
-        System.out.println(loginsss + " " + passwordsss);
-        return "loginpage";
-    }
+//    @RequestMapping(value = "/loginin", method = RequestMethod.GET)
+//    public String login(HttpServletRequest request, HttpServletResponse response) {
+//        String loginsss = request.getParameter("logn");
+//        String passwordsss = request.getParameter("pass");
+//        System.out.println(loginsss + " " + passwordsss);
+//        return "loginpage";
+//    }
 
     @PostMapping("/pdf")
     public ResponseEntity<Resource> getPdf(){

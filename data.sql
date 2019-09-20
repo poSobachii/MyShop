@@ -2,45 +2,41 @@ create database if not exists smartdogshop;
 
 use smartdogshop;
 
-drop table if exists shirts;
-drop table if exists shirtsTwo;
-drop table if exists cups;
-drop table if exists BALLOONS;
+drop table if exists WARES;
 
-create table shirts (id varchar(50), primary key(id), wareType varchar(50), price float, qty int, info text);
-insert into shirts values (1, 'red shirt', 11.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
-insert into shirts values (2, 'blue shirt', 13.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
-insert into shirts values (3, 'white shirt', 15.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
-insert into shirts values (4, 'green shirt', 14.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
-insert into shirts values (5, 'yellow shirt', 13.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
-insert into shirts values (6, 'black shirt', 15.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
-insert into shirts values (7, 'brownee shirt', 15.99, 10, 'some text added super mega ulta long text with some wwww.facebook.com links and etc
-so everyone will be shocked when they will read this shit- ok nice ?');
 
-create table shirtsTwo (id varchar(50), primary key(id) , wareType varchar(50), price float, qty int, info text);
-insert into shirtsTwo values (100, 'ADIDAS shirt', 11.99, 10, 'some extra info');
-insert into shirtsTwo values (200, 'DOG shirt', 13.99, 10, 'some extra info');
-insert into shirtsTwo values (300, 'ESPORTS shirt', 15.99, 10, 'some extra info');
-insert into shirtsTwo values (400, 'NIKE shirt', 14.99, 10, 'some extra info');
-insert into shirtsTwo values (500, 'HUAWEI shirt', 13.99, 10, 'some extra info');
-insert into shirtsTwo values (600, 'PUMA shirt', 15.99, 10, 'some extra info');
+create table wares (
+    id int auto_increment primary key,
+    waretype varchar(15),
+    warename varchar(50),
+    imgcode varchar(20),
+    price float,
+    qty int,
+    info text
+);
 
-create table cups (id varchar(50), primary key(id) , wareType varchar(50), price float, qty int, info text);
-insert into cups values (501, 'CHICKEN cup', 11.70, 10, 'some extra info');
-insert into cups values (502, 'DOG cup', 11.70, 10, 'some extra info');
-insert into cups values (503, 'CAT cup', 11.70, 10, 'some extra info');
-insert into cups values (504, 'HORSE cup', 11.70, 10, 'some extra info');
-insert into cups values (505, 'BIRD cup', 11.70, 10, 'some extra info');
 
-create table BALLOONS (id varchar(50), primary key(id) , WARETYPE varchar(50), PRICE float, QTY int, INFO text);
-insert into BALLOONS values (1501, 'RED ballon', 11.70, 10, 'some extra info');
-insert into BALLOONS values (1502, 'BLUE ballon', 11.70, 10, 'some extra info');
-insert into BALLOONS values (1503, 'GREEN ballon', 11.70, 10, 'some extra info');
-insert into BALLOONS values (1504, 'ORANGE ballon', 11.70, 10, 'some extra info');
-insert into BALLOONS values (1505, 'LIME ballon', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'red shirt', '1', 11.99, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'blue shirt', '2', 13.99, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'white shirt', '3', 15.99, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'green shirt', '4', 14.75, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'yellow shirt', '5', 13.90, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'black shirt', '6', 15.99, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'brownee shirt', '7', 15.50, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt', 'magenta shirt', '8', 12.30, 10 , 'some text' );
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt2', 'ADIDAS shirt', '100', 11.99, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt2', 'DOG shirt', '200', 13.99, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt2', 'ESPORTS shirt', '300', 15.99, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt2', 'NIKE shirt', '400', 14.99, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt2', 'HUAWEI shirt', '500', 13.99, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('shirt2', 'PUMA shirt', '600', 15.99, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('cups', 'CHICKEN cup','501', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('cups', 'DOG cup','502', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('cups', 'CAT cup','503', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('cups', 'HORSE cup','504', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('cups', 'BIRD cup','505', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('balloons', 'RED ballon','1501', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('balloons', 'BLUE ballon','1502', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('balloons', 'GREEN ballon','1503', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('balloons', 'ORANGE ballon','1504', 11.70, 10, 'some extra info');
+insert into wares (waretype, warename, imgcode, price, qty, info) values ('balloons', 'LIME ballon','1505', 11.70, 10, 'some extra info');

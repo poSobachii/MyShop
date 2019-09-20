@@ -1,7 +1,7 @@
 package myshop.PDfHandler;
 
 import myshop.BasketPack.BasketOrder;
-import myshop.WareTemplates.BasicWare;
+import myshop.Entities.BasicWare;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;

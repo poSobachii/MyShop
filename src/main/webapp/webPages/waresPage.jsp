@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
      <link rel="stylesheet" href="css/Layers13.css">
      <link rel="stylesheet" href="css/Buttons5.css">
-     <script type="text/javascript" src="js/scripts2.js"></script>
+     <script type="text/javascript" src="js/scripts5.js"></script>
 </head>
 <body>
 
@@ -56,13 +56,13 @@
     <div class="CenterLeftBox" method="get">
 
                    <form action = "wareContent">
-                   <input type="hidden" name="ware" value="shirts">
+                   <input type="hidden" name="ware" value="shirt">
                    <input type="submit" class="menu_choice1" value=" "><!--
                    --><input type="submit" class="menu_choice" value="Майки #1">
                    </form>
 
                    <form action = "wareContent">
-                   <input type="hidden" name="ware" value="shirtsTwo">
+                   <input type="hidden" name="ware" value="shirt2">
                    <input type="submit" class="menu_choice2" value=" "><!--
                    --><input type="submit" class="menu_choice" value="Майки #2">
                    </form>

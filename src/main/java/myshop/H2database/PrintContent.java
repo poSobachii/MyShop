@@ -1,7 +1,7 @@
 package myshop.H2database;
 
 
-import myshop.WareTemplates.BasicWare;
+import myshop.Entities.BasicWare;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public class PrintContent {
                             "<form action=\"wareInfo\">" +
                             "<input type=\"hidden\" name=\"wareGroup\" value=\"" + e.getClass().getSimpleName() + "\">" +
                             "<input type=\"hidden\" name=\"wareID\" value=\"" + id + "\">" +
-                            "<input type=\"image\" <img src=\"pics/"+ e.getClass().getSimpleName() + "/" + id + ".png\"" +
+                            "<input type=\"image\" <img src=\"pics/"+ e.getClass().getSimpleName() + "/" + e.getImgSource() + ".png\"" +
                             " width=\"250\" height=\"225\" alt=\"there is no picture :(\" />" +
                             "</form>" +
                             "<form action=\"wareInfo\">" +
@@ -40,8 +40,7 @@ public class PrintContent {
                             "</br><form name = \"addToBasket\">" +
                             "<input type=\"hidden\" name=\"basketValue\" value=\"" + id + "\">" +
                             "<input type=\"button\" value=\"Add to basket\"" +
-                            " onclick=\"return add_to_basket(" +
-                            "\'" + e.getClass().getSimpleName() + "\',\'" + title + "\'," + id +
+                            " onclick=\"return add_to_basket(\'" + title + "\'," + id +
                             ")\"></form></div>\n");
         }
         return stringBuilder;

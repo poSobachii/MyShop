@@ -1,8 +1,7 @@
 package myshop.BasketPack;
 
-import myshop.H2database.DatabaseCommander;
-import myshop.Repository.BalloonRepository;
-import myshop.WareTemplates.BasicWare;
+import myshop.H2database.DatabaseHandler;
+import myshop.Entities.BasicWare;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,19 +12,18 @@ import java.util.List;
 public class BasketOrder {
 
 
-    private static DatabaseCommander databaseCommander;
+    private static DatabaseHandler databaseCommander;
     static List<BasicWare> wareList = new ArrayList<>();
 
     @Autowired
-    public BasketOrder(DatabaseCommander dbCommander){
+    public BasketOrder(DatabaseHandler dbCommander){
         BasketOrder.databaseCommander = dbCommander;
     }
 
     @Autowired
-    BalloonRepository balloonRepository;
 
-    public static void addOrder(String wareType, String wareCode) {
-        wareList.add(databaseCommander.getOneItem(wareType, Long.parseLong(wareCode)));
+    public static void addOrder(String wareCode) {
+        wareList.add(databaseCommander.getOneItem(Long.parseLong(wareCode)));
     }
 
 
@@ -44,12 +42,12 @@ public class BasketOrder {
         StringBuilder stringBuilder = new StringBuilder();
         for (BasicWare e : wareList) {
             stringBuilder.append("<div class=\"col-sm-4\" style=\"background-color:transparent;\">" +
-                    "<img src=\"pics/" + e.getClass().getSimpleName() + "/" + e.getId() + ".png\" +\n" +
+                    "<img src=\"pics/"+ e.getClass().getSimpleName() + "/" + e.getImgSource() + ".png\"\" +\n" +
                     "                             width=\"250\" height=\"225\" alt=\"there is no picture :(\" />"+
                     e.getWareName() + "</br>" +
                     e.getWarePrice() + "</br>" +
-                    e.getPriceQuantity() + "</br>" +
-                    e.getDescription() + "</div>");
+                    e.getPriceQuantity() + "</br></div>");
+
 
         }
         return stringBuilder;

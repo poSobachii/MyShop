@@ -1,9 +1,8 @@
 <%@ page import="myshop.BasketPack.BasketOrder"%>
 
 <%
-String type =(String)request.getParameter("param1");
-String name =(String)request.getParameter("param2");
-String id = (String)request.getParameter("param3");
+String name =(String)request.getParameter("bla2");
+String id = (String)request.getParameter("blablabla");
 out.println(name + " Added to the Basket");
-BasketOrder.addOrder(type,id);
+BasketOrder.addOrder(id);
 %>

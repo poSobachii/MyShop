@@ -1,6 +1,6 @@
 package myshop.H2database;
 
-import myshop.WareTemplates.BasicWare;
+import myshop.Entities.BasicWare;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,8 +20,7 @@ public class OneWareInfoPrint {
         stringBuilder.append("results are: </br>" +
                 wareToPrint.getWareName() + "</br>" +
                 wareToPrint.getWarePrice() + "</br>" +
-                wareToPrint.getPriceQuantity() + "</br>" +
-                wareToPrint.getDescription());
+                wareToPrint.getPriceQuantity() + "</br>" );
         return stringBuilder;
     }
 }
